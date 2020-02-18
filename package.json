@@ -1,0 +1,20 @@
+{
+  "name": "ng_visual",
+  "version": "1.0.0",
+  "description": "an api for visiualization for the Nigerian Government",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js -e js,hbs"
+  },
+  "author": "Okocha Ebube",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.5.3",
+    "mongoose": "^5.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
