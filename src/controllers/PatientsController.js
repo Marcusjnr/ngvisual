@@ -3,7 +3,7 @@ const Patient = require("../models/patients");
 
 class PatientsController{
     static async addPatient(req,res){
-        let patient = new Patient({...req.body, personnel_id: req.body.personnel_id});
+        let patient = new Patient(req.body);
 
         try {
 
@@ -14,6 +14,7 @@ class PatientsController{
                         result: error.toString()
                     })
                 } else {
+                    await patient.addCases(req.body.case_name,req.body.diagnosis,req.body.status,req.body.referral,req.body.priority);
                     res.status(201).send({
                         success:true,
                         result: result
