@@ -3,6 +3,5 @@ const router = new express.Router();
 const CaseFileController = require('../controllers/CaseFileController');
 
 router.get('/api/case/get/all/:id', CaseFileController.getCases);
-router.get('/api/case/filter', CaseFileController.filterResponses);
 
 module.exports = router;

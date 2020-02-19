@@ -17,10 +17,14 @@ const patientsSchema = new mongoose.Schema({
     },
 
     lga:{
-        type:String
+        type:String,
+        required: true,
+        lowercase:true
     },
     ward:{
-        type:String
+        type:String,
+        required:true,
+        lowercase:true,
     },
     age:{
         type: Number,
