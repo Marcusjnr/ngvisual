@@ -2,7 +2,7 @@ const express = require('express');
 require('./db/mongoose');
 const personnelRoute = require('./routes/personnels');
 const cors = require('cors');
-const corsConfig = require("./config/cors");
+const corsConfig = require("../config/cors");
 const patientRoute = require('./routes/patients');
 const caseRoute = require('./routes/case_files');
 
