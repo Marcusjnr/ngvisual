@@ -80,10 +80,15 @@ class PatientsController{
             })
         }
     }
+
+    static async filterResponses(req,res){
+
+    }
 }
 
 module.exports = {
   addPatient: PatientsController.addPatient,
   getPatient: PatientsController.getPatient,
-    getPatients: PatientsController.getPatients
+    getPatients: PatientsController.getPatients,
+    filterResponses: PatientsController.filterResponses,
 };

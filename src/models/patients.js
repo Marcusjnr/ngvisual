@@ -16,6 +16,12 @@ const patientsSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
     },
 
+    lga:{
+        type:String
+    },
+    ward:{
+        type:String
+    },
     age:{
         type: Number,
         required: true

@@ -31,12 +31,10 @@ class   CaseFileController{
     }
 
 
-    static async filterResponses(req,res){
 
-    }
 }
 
 module.exports = {
   getCases: CaseFileController.getCases,
-    filterResponses: CaseFileController.filterResponses
+
 };
