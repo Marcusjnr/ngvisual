@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(personnelRoute);
 app.use(patientRoute);
 app.use(caseRoute);
-app.use((req, res, next) => {
+app.use(cors(), function(req, res, next) {
     res.header("Access-Control-Allow-Origin", corsConfig.origins);
     res.header("Access-Control-Allow-Headers", corsConfig.headers);
     if (req.method === "OPTIONS") {

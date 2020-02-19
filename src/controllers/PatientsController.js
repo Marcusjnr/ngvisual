@@ -82,6 +82,10 @@ class PatientsController{
     }
 
     static async filterResponses(req,res){
+        let ward = req.body.ward;
+        let lga = req.body.lga;
+        let name = req.body.name;
+
 
     }
 }
