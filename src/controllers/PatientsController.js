@@ -98,7 +98,7 @@ class PatientsController{
         }else if (keyValue === "lga"){
             lga = obj.lga
         }else if(keyValue === "name"){
-            name = obj.ward;
+            name = obj.name;
         }
 
         try {
@@ -112,10 +112,15 @@ class PatientsController{
                 );
             }else if (keyValue === "name"){
                 patients = await Patient.aggregate(
-                    [ { $match : { name } } ]
+                    [ { $match : { "names" :{$in :  cases} } } ]
                 );
             }
-
+            if (patients === undefined){
+                return res.send({
+                    success: true,
+                    result:[]
+                })
+            }
 
             res.send({
                 success: true,
