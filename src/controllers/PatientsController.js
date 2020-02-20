@@ -91,14 +91,11 @@ class PatientsController{
 
         let ward;
         let lga;
-        let name;
 
         if (keyValue === "ward"){
             ward = obj.ward;
         }else if (keyValue === "lga"){
             lga = obj.lga
-        }else if(keyValue === "name"){
-            name = obj.name;
         }
 
         try {
@@ -109,10 +106,6 @@ class PatientsController{
             }else if(keyValue === "lga"){
                 patients = await Patient.aggregate(
                     [ { $match : { lga } } ]
-                );
-            }else if (keyValue === "name"){
-                patients = await Patient.aggregate(
-                    [ { $match : { "names" :{$in :  cases} } } ]
                 );
             }
             if (patients === undefined){
