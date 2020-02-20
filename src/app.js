@@ -24,7 +24,6 @@ app.use(express.json());
 app.use(personnelRoute);
 app.use(patientRoute);
 app.use(caseRoute);
-// app.use(cors());
 
 
 app.listen(port, ()=>{
