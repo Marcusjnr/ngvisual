@@ -5,6 +5,7 @@ const cors = require('cors');
 const corsConfig = require("../config/cors");
 const patientRoute = require('./routes/patients');
 const caseRoute = require('./routes/case_files');
+const feedbackRoute = require('./routes/feedback');
 
 const app = express();
 
@@ -24,7 +25,7 @@ app.use(express.json());
 app.use(personnelRoute);
 app.use(patientRoute);
 app.use(caseRoute);
-
+app.use(feedbackRoute);
 
 app.listen(port, ()=>{
     console.log('Server is up on port ' + port)
