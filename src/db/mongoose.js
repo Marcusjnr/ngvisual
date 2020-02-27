@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const url = 'mongodb+srv://ebube:ebube12345@cluster0-6rrk9.mongodb.net/visualization?retryWrites=true&w=majority';
+
 mongoose.connect(url,{
     useNewUrlParser:true,
     useCreateIndex: true,
